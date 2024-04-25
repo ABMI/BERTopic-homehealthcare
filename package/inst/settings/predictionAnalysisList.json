@@ -1,0 +1,1027 @@
+{
+  "getPlpDataArgs": {
+    "maxSampleSize": null,
+    "washoutPeriod": 0
+  },
+  "skeletonType": "PatientLevelPredictionStudy",
+  "populationSettings": [
+    {
+      "minTimeAtRisk": 13,
+      "requireTimeAtRisk": true,
+      "addExposureDaysToStart": false,
+      "riskWindowStart": 1,
+      "washoutPeriod": 365,
+      "attr_class": "populationSettings",
+      "addExposureDaysToEnd": false,
+      "includeAllOutcomes": true,
+      "priorOutcomeLookback": 99999,
+      "binary": true,
+      "removeSubjectsWithPriorOutcome": false,
+      "riskWindowEnd": 14,
+      "firstExposureOnly": false
+    },
+    {
+      "minTimeAtRisk": 20,
+      "requireTimeAtRisk": true,
+      "addExposureDaysToStart": false,
+      "riskWindowStart": 1,
+      "washoutPeriod": 365,
+      "attr_class": "populationSettings",
+      "addExposureDaysToEnd": false,
+      "includeAllOutcomes": true,
+      "priorOutcomeLookback": 99999,
+      "binary": true,
+      "removeSubjectsWithPriorOutcome": false,
+      "riskWindowEnd": 21,
+      "firstExposureOnly": false
+    },
+    {
+      "minTimeAtRisk": 29,
+      "requireTimeAtRisk": true,
+      "addExposureDaysToStart": false,
+      "riskWindowStart": 1,
+      "washoutPeriod": 365,
+      "attr_class": "populationSettings",
+      "addExposureDaysToEnd": false,
+      "includeAllOutcomes": true,
+      "priorOutcomeLookback": 99999,
+      "binary": true,
+      "removeSubjectsWithPriorOutcome": false,
+      "riskWindowEnd": 30,
+      "firstExposureOnly": false
+    },
+    {
+      "minTimeAtRisk": 89,
+      "requireTimeAtRisk": true,
+      "addExposureDaysToStart": false,
+      "riskWindowStart": 1,
+      "washoutPeriod": 365,
+      "attr_class": "populationSettings",
+      "addExposureDaysToEnd": false,
+      "includeAllOutcomes": true,
+      "priorOutcomeLookback": 99999,
+      "binary": true,
+      "removeSubjectsWithPriorOutcome": false,
+      "riskWindowEnd": 90,
+      "firstExposureOnly": false
+    },
+    {
+      "minTimeAtRisk": 179,
+      "requireTimeAtRisk": true,
+      "addExposureDaysToStart": false,
+      "riskWindowStart": 1,
+      "washoutPeriod": 365,
+      "attr_class": "populationSettings",
+      "addExposureDaysToEnd": false,
+      "includeAllOutcomes": true,
+      "priorOutcomeLookback": 99999,
+      "binary": true,
+      "removeSubjectsWithPriorOutcome": false,
+      "riskWindowEnd": 180,
+      "firstExposureOnly": false
+    },
+    {
+      "minTimeAtRisk": 364,
+      "requireTimeAtRisk": true,
+      "addExposureDaysToStart": false,
+      "riskWindowStart": 1,
+      "washoutPeriod": 365,
+      "attr_class": "populationSettings",
+      "addExposureDaysToEnd": false,
+      "includeAllOutcomes": true,
+      "priorOutcomeLookback": 99999,
+      "binary": true,
+      "removeSubjectsWithPriorOutcome": false,
+      "riskWindowEnd": 365,
+      "firstExposureOnly": false
+    }
+  ],
+  "organizationName": "OHDSI",
+  "targetIds": [3938],
+  "runPlpArgs": {
+    "nfold": 3,
+    "minCovariateFraction": 0.001,
+    "splitSeed": null,
+    "testSplit": "person",
+    "testFraction": 0.25,
+    "normalizeData": true
+  },
+  "version": "v2.7.0",
+  "outcomeIds": [3896],
+  "skeletonVersion": "v0.0.1",
+  "conceptSetCrossReference": [],
+  "cohortDefinitions": [
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "All"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 262,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "ERIP",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Emergency Room and Inpatient Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Visit",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 9201,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "IP",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Inpatient Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Visit",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 32037,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "OMOP4822460",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Intensive Care",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Visit",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 9203,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "ER",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Emergency Room Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Visit",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "[sooj] EPIP",
+          "id": 0
+        }],
+        "EndStrategy": {"DateOffset": {
+          "DateField": "StartDate",
+          "Offset": 1
+        }},
+        "cdmVersionRange": ">=5.0.0",
+        "CensoringCriteria": [],
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [{
+          "expression": {
+            "CriteriaList": [{
+              "RestrictVisit": false,
+              "StartWindow": {
+                "UseEventEnd": false,
+                "Start": {
+                  "Days": null,
+                  "Coeff": -1
+                },
+                "End": {
+                  "Days": 8,
+                  "Coeff": -1
+                },
+                "UseIndexEnd": false
+              },
+              "IgnoreObservationPeriod": false,
+              "EndWindow": null,
+              "Criteria": {"VisitOccurrence": {
+                "OccurrenceEndDate": null,
+                "VisitLength": {
+                  "Op": "gte",
+                  "Extent": null,
+                  "Value": 1
+                },
+                "CorrelatedCriteria": null,
+                "VisitSourceConcept": null,
+                "CodesetId": 0,
+                "VisitTypeExclude": false,
+                "ProviderSpecialty": null,
+                "Gender": null,
+                "PlaceOfServiceLocation": null,
+                "PlaceOfService": null,
+                "VisitType": null,
+                "First": null,
+                "OccurrenceStartDate": null,
+                "Age": null
+              }},
+              "Occurrence": {
+                "Type": 2,
+                "CountColumn": null,
+                "IsDistinct": false,
+                "Count": 1
+              }
+            }],
+            "Type": "ALL",
+            "DemographicCriteriaList": [],
+            "Groups": [],
+            "Count": null
+          },
+          "name": "previous hospitalization ",
+          "description": null
+        }],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"VisitOccurrence": {
+            "OccurrenceEndDate": null,
+            "VisitLength": {
+              "Op": "gte",
+              "Extent": null,
+              "Value": 1
+            },
+            "CorrelatedCriteria": {
+              "CriteriaList": [{
+                "RestrictVisit": false,
+                "StartWindow": {
+                  "UseEventEnd": true,
+                  "Start": {
+                    "Days": 7,
+                    "Coeff": -1
+                  },
+                  "End": {
+                    "Days": 1,
+                    "Coeff": -1
+                  },
+                  "UseIndexEnd": false
+                },
+                "IgnoreObservationPeriod": false,
+                "EndWindow": null,
+                "Criteria": {"VisitOccurrence": {
+                  "OccurrenceEndDate": null,
+                  "VisitLength": {
+                    "Op": "gte",
+                    "Extent": null,
+                    "Value": 1
+                  },
+                  "CorrelatedCriteria": null,
+                  "VisitSourceConcept": null,
+                  "CodesetId": 0,
+                  "VisitTypeExclude": false,
+                  "ProviderSpecialty": null,
+                  "Gender": null,
+                  "PlaceOfServiceLocation": null,
+                  "PlaceOfService": null,
+                  "VisitType": null,
+                  "First": null,
+                  "OccurrenceStartDate": null,
+                  "Age": null
+                }},
+                "Occurrence": {
+                  "Type": 0,
+                  "CountColumn": null,
+                  "IsDistinct": false,
+                  "Count": 0
+                }
+              }],
+              "Type": "ALL",
+              "DemographicCriteriaList": [],
+              "Groups": [],
+              "Count": null
+            },
+            "VisitSourceConcept": null,
+            "CodesetId": 0,
+            "VisitTypeExclude": false,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "PlaceOfServiceLocation": null,
+            "PlaceOfService": null,
+            "VisitType": null,
+            "First": null,
+            "OccurrenceStartDate": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "All"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": null,
+      "createdBy": null,
+      "name": "[sooj] readmission (Except for ER) (outcome)",
+      "modifiedDate": null,
+      "description": null,
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 3896
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 262,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "ERIP",
+                  "VOCABULARY_ID": "Visit",
+                  "CONCEPT_NAME": "Emergency Room and Inpatient Visit",
+                  "DOMAIN_ID": "Visit",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Visit",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 9201,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "IP",
+                  "VOCABULARY_ID": "Visit",
+                  "CONCEPT_NAME": "Inpatient Visit",
+                  "DOMAIN_ID": "Visit",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Visit",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 32037,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "OMOP4822460",
+                  "VOCABULARY_ID": "Visit",
+                  "CONCEPT_NAME": "Intensive Care",
+                  "DOMAIN_ID": "Visit",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Visit",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 9203,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "ER",
+                  "VOCABULARY_ID": "Visit",
+                  "CONCEPT_NAME": "Emergency Room Visit",
+                  "DOMAIN_ID": "Visit",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Visit",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "[sooj] EPIP",
+            "id": 0
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4236026,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "90817005",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Home care by visiting nurse",
+                  "DOMAIN_ID": "Observation",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4246074,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "60689008",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Home care of patient",
+                  "DOMAIN_ID": "Observation",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4295046,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "385783005",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Home health aide service management",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2721443,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "S9124",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Nursing care, in the home; by licensed practical nurse, per hour",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "[sooj] home heatlhcare",
+            "id": 1
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4257833,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "410077009",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Patient transfer management",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4251584,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "410075001",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Patient transfer assessment",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4030023,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "107724000",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Patient transfer",
+                  "DOMAIN_ID": "Observation",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "[sooj] Transfer status",
+            "id": 2
+          }
+        ],
+        "EndStrategy": {"DateOffset": {
+          "DateField": "StartDate",
+          "Offset": 0
+        }},
+        "cdmVersionRange": ">=5.0.0",
+        "CensoringCriteria": [],
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [
+            {"ProcedureOccurrence": {
+              "ProcedureType": null,
+              "CorrelatedCriteria": {
+                "CriteriaList": [{
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": true,
+                    "Start": {
+                      "Days": 7,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 1,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"VisitOccurrence": {
+                    "OccurrenceEndDate": null,
+                    "VisitLength": {
+                      "Op": "gte",
+                      "Extent": null,
+                      "Value": 2
+                    },
+                    "CorrelatedCriteria": {
+                      "CriteriaList": [
+                        {
+                          "RestrictVisit": false,
+                          "StartWindow": {
+                            "UseEventEnd": false,
+                            "Start": {
+                              "Days": 0,
+                              "Coeff": -1
+                            },
+                            "End": {
+                              "Days": 0,
+                              "Coeff": 1
+                            },
+                            "UseIndexEnd": true
+                          },
+                          "IgnoreObservationPeriod": false,
+                          "EndWindow": null,
+                          "Criteria": {"Observation": {
+                            "ValueAsConcept": null,
+                            "ObservationType": null,
+                            "CorrelatedCriteria": null,
+                            "ObservationTypeExclude": false,
+                            "ValueAsString": null,
+                            "CodesetId": 2,
+                            "ProviderSpecialty": null,
+                            "Gender": null,
+                            "Unit": null,
+                            "ObservationSourceConcept": null,
+                            "VisitType": null,
+                            "ValueAsNumber": null,
+                            "Qualifier": null,
+                            "First": null,
+                            "OccurrenceStartDate": null,
+                            "Age": null
+                          }},
+                          "Occurrence": {
+                            "Type": 0,
+                            "CountColumn": null,
+                            "IsDistinct": false,
+                            "Count": 0
+                          }
+                        },
+                        {
+                          "RestrictVisit": false,
+                          "StartWindow": {
+                            "UseEventEnd": false,
+                            "Start": {
+                              "Days": 0,
+                              "Coeff": -1
+                            },
+                            "End": {
+                              "Days": 0,
+                              "Coeff": 1
+                            },
+                            "UseIndexEnd": true
+                          },
+                          "IgnoreObservationPeriod": false,
+                          "EndWindow": null,
+                          "Criteria": {"ProcedureOccurrence": {
+                            "ProcedureType": null,
+                            "CorrelatedCriteria": null,
+                            "CodesetId": 2,
+                            "ProcedureSourceConcept": null,
+                            "Quantity": null,
+                            "ProviderSpecialty": null,
+                            "Gender": null,
+                            "ProcedureTypeExclude": false,
+                            "VisitType": null,
+                            "First": null,
+                            "OccurrenceStartDate": null,
+                            "Modifier": null,
+                            "Age": null
+                          }},
+                          "Occurrence": {
+                            "Type": 0,
+                            "CountColumn": null,
+                            "IsDistinct": false,
+                            "Count": 0
+                          }
+                        }
+                      ],
+                      "Type": "ANY",
+                      "DemographicCriteriaList": [],
+                      "Groups": [],
+                      "Count": null
+                    },
+                    "VisitSourceConcept": null,
+                    "CodesetId": 0,
+                    "VisitTypeExclude": false,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "PlaceOfServiceLocation": null,
+                    "PlaceOfService": null,
+                    "VisitType": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 2,
+                    "CountColumn": null,
+                    "IsDistinct": false,
+                    "Count": 1
+                  }
+                }],
+                "Type": "ALL",
+                "DemographicCriteriaList": [],
+                "Groups": [],
+                "Count": null
+              },
+              "CodesetId": 1,
+              "ProcedureSourceConcept": null,
+              "Quantity": null,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "ProcedureTypeExclude": false,
+              "VisitType": null,
+              "First": null,
+              "OccurrenceStartDate": null,
+              "Modifier": null,
+              "Age": {
+                "Op": "gte",
+                "Extent": null,
+                "Value": 18
+              }
+            }},
+            {"Observation": {
+              "ValueAsConcept": null,
+              "ObservationType": null,
+              "CorrelatedCriteria": {
+                "CriteriaList": [{
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": true,
+                    "Start": {
+                      "Days": 7,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 1,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"VisitOccurrence": {
+                    "OccurrenceEndDate": null,
+                    "VisitLength": {
+                      "Op": "gte",
+                      "Extent": null,
+                      "Value": 2
+                    },
+                    "CorrelatedCriteria": {
+                      "CriteriaList": [
+                        {
+                          "RestrictVisit": false,
+                          "StartWindow": {
+                            "UseEventEnd": false,
+                            "Start": {
+                              "Days": 0,
+                              "Coeff": -1
+                            },
+                            "End": {
+                              "Days": 0,
+                              "Coeff": 1
+                            },
+                            "UseIndexEnd": true
+                          },
+                          "IgnoreObservationPeriod": false,
+                          "EndWindow": null,
+                          "Criteria": {"Observation": {
+                            "ValueAsConcept": null,
+                            "ObservationType": null,
+                            "CorrelatedCriteria": null,
+                            "ObservationTypeExclude": false,
+                            "ValueAsString": null,
+                            "CodesetId": 2,
+                            "ProviderSpecialty": null,
+                            "Gender": null,
+                            "Unit": null,
+                            "ObservationSourceConcept": null,
+                            "VisitType": null,
+                            "ValueAsNumber": null,
+                            "Qualifier": null,
+                            "First": null,
+                            "OccurrenceStartDate": null,
+                            "Age": null
+                          }},
+                          "Occurrence": {
+                            "Type": 0,
+                            "CountColumn": null,
+                            "IsDistinct": false,
+                            "Count": 0
+                          }
+                        },
+                        {
+                          "RestrictVisit": false,
+                          "StartWindow": {
+                            "UseEventEnd": false,
+                            "Start": {
+                              "Days": 0,
+                              "Coeff": -1
+                            },
+                            "End": {
+                              "Days": 0,
+                              "Coeff": 1
+                            },
+                            "UseIndexEnd": true
+                          },
+                          "IgnoreObservationPeriod": false,
+                          "EndWindow": null,
+                          "Criteria": {"ProcedureOccurrence": {
+                            "ProcedureType": null,
+                            "CorrelatedCriteria": null,
+                            "CodesetId": 2,
+                            "ProcedureSourceConcept": null,
+                            "Quantity": null,
+                            "ProviderSpecialty": null,
+                            "Gender": null,
+                            "ProcedureTypeExclude": false,
+                            "VisitType": null,
+                            "First": null,
+                            "OccurrenceStartDate": null,
+                            "Modifier": null,
+                            "Age": null
+                          }},
+                          "Occurrence": {
+                            "Type": 0,
+                            "CountColumn": null,
+                            "IsDistinct": false,
+                            "Count": 0
+                          }
+                        }
+                      ],
+                      "Type": "ANY",
+                      "DemographicCriteriaList": [],
+                      "Groups": [],
+                      "Count": null
+                    },
+                    "VisitSourceConcept": null,
+                    "CodesetId": 0,
+                    "VisitTypeExclude": false,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "PlaceOfServiceLocation": null,
+                    "PlaceOfService": null,
+                    "VisitType": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 2,
+                    "CountColumn": null,
+                    "IsDistinct": false,
+                    "Count": 1
+                  }
+                }],
+                "Type": "ALL",
+                "DemographicCriteriaList": [],
+                "Groups": [],
+                "Count": null
+              },
+              "ObservationTypeExclude": false,
+              "ValueAsString": null,
+              "CodesetId": 1,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "Unit": null,
+              "ObservationSourceConcept": null,
+              "VisitType": null,
+              "ValueAsNumber": null,
+              "Qualifier": null,
+              "First": null,
+              "OccurrenceStartDate": null,
+              "Age": {
+                "Op": "gte",
+                "Extent": null,
+                "Value": 18
+              }
+            }}
+          ],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 365
+          }
+        }
+      },
+      "createdDate": null,
+      "createdBy": null,
+      "name": "[sooj] home healthcare within a week (target) (v2)",
+      "modifiedDate": null,
+      "description": null,
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 3938
+    }
+  ],
+  "modelSettings": [{"LassoLogisticRegressionSettings": {
+    "seed": null,
+    "variance": 0.01
+  }}],
+  "name": "[sooj] home healthcare readmission (221229)",
+  "covariateSettings": [{
+    "VisitCountMediumTerm": false,
+    "ObservationShortTerm": true,
+    "shortTermStartDays": -30,
+    "MeasurementRangeGroupShortTerm": true,
+    "ConditionOccurrenceLongTerm": true,
+    "DrugEraStartLongTerm": false,
+    "VisitCountShortTerm": true,
+    "Chads2Vasc": false,
+    "ConditionGroupEraStartLongTerm": false,
+    "ConditionEraShortTerm": false,
+    "Dcsi": true,
+    "DrugGroupEraLongTerm": true,
+    "DrugGroupEraShortTerm": true,
+    "ConditionEraStartLongTerm": false,
+    "temporal": false,
+    "DemographicsIndexMonth": false,
+    "ConditionOccurrencePrimaryInpatientLongTerm": true,
+    "ConditionEraAnyTimePrior": false,
+    "addDescendantsToInclude": false,
+    "ConditionGroupEraStartMediumTerm": false,
+    "ProcedureOccurrenceLongTerm": true,
+    "DrugExposureLongTerm": true,
+    "DrugEraStartShortTerm": false,
+    "DistinctIngredientCountMediumTerm": false,
+    "DistinctMeasurementCountShortTerm": false,
+    "MeasurementRangeGroupLongTerm": true,
+    "ConditionGroupEraOverlapping": false,
+    "attr_fun": "getDbDefaultCovariateData",
+    "MeasurementRangeGroupMediumTerm": false,
+    "DrugGroupEraStartMediumTerm": false,
+    "MeasurementAnyTimePrior": false,
+    "MeasurementMediumTerm": false,
+    "includedCovariateIds": [8507001, 4074035802,4298794802,30204602712,30233142710,30136823712,30165021710,21600960412,4296529504,
+1103314410,21600490412,201820210,316866212,432851212,439392210],
+
+    "ConditionOccurrenceAnyTimePrior": false,
+    "DistinctConditionCountLongTerm": false,
+    "MeasurementValueLongTerm": false,
+    "DrugEraShortTerm": false,
+    "DrugGroupEraAnyTimePrior": false,
+    "DrugEraOverlapping": false,
+    "ConditionOccurrencePrimaryInpatientAnyTimePrior": false,
+    "ConditionEraMediumTerm": false,
+    "ConditionEraOverlapping": false,
+    "ConditionEraStartShortTerm": false,
+    "ObservationAnyTimePrior": false,
+    "VisitConceptCountShortTerm": true,
+    "DemographicsEthnicity": false,
+    "DistinctIngredientCountLongTerm": false,
+    "ConditionOccurrencePrimaryInpatientShortTerm": true,
+    "DemographicsAgeGroup": true,
+    "DistinctProcedureCountShortTerm": false,
+    "DistinctObservationCountMediumTerm": false,
+    "includedCovariateConceptIds": [],
+    "DrugGroupEraStartShortTerm": false,
+    "addDescendantsToExclude": false,
+    "DrugEraLongTerm": false,
+    "DistinctConditionCountShortTerm": false,
+    "ConditionGroupEraShortTerm": true,
+    "ConditionEraStartMediumTerm": false,
+    "VisitCountLongTerm": true,
+    "DemographicsRace": false,
+    "ProcedureOccurrenceAnyTimePrior": false,
+    "DistinctObservationCountLongTerm": false,
+    "attr_class": "covariateSettings",
+    "ProcedureOccurrenceMediumTerm": false,
+    "CharlsonIndex": true,
+    "DemographicsPriorObservationTime": false,
+    "MeasurementShortTerm": false,
+    "DistinctProcedureCountMediumTerm": false,
+    "ConditionEraLongTerm": false,
+    "DrugGroupEraStartLongTerm": false,
+    "DemographicsGender": true,
+    "DeviceExposureAnyTimePrior": false,
+    "ObservationLongTerm": true,
+    "DemographicsIndexYearMonth": false,
+    "ConditionOccurrenceMediumTerm": false,
+    "longTermStartDays": -365,
+    "DemographicsAge": true,
+    "DrugGroupEraOverlapping": false,
+    "DistinctMeasurementCountLongTerm": false,
+    "MeasurementRangeGroupAnyTimePrior": false,
+    "DistinctConditionCountMediumTerm": false,
+    "DrugGroupEraMediumTerm": false,
+    "ProcedureOccurrenceShortTerm": true,
+    "ObservationMediumTerm": false,
+    "ConditionGroupEraAnyTimePrior": false,
+    "Chads2": true,
+    "DrugExposureAnyTimePrior": false,
+    "DeviceExposureLongTerm": false,
+    "DemographicsTimeInCohort": false,
+    "DistinctMeasurementCountMediumTerm": false,
+    "MeasurementValueShortTerm": false,
+    "DeviceExposureMediumTerm": false,
+    "ConditionGroupEraStartShortTerm": false,
+    "ConditionOccurrencePrimaryInpatientMediumTerm": false,
+    "MeasurementLongTerm": false,
+    "DemographicsIndexYear": false,
+    "MeasurementValueMediumTerm": false,
+    "DrugEraStartMediumTerm": false,
+    "MeasurementValueAnyTimePrior": false,
+    "DistinctObservationCountShortTerm": false,
+    "DrugEraMediumTerm": false,
+    "ConditionGroupEraLongTerm": true,
+    "DrugExposureShortTerm": true,
+    "DistinctIngredientCountShortTerm": false,
+    "DeviceExposureShortTerm": false,
+    "mediumTermStartDays": -180,
+    "DemographicsPostObservationTime": false,
+    "VisitConceptCountLongTerm": true,
+    "VisitConceptCountMediumTerm": false,
+    "excludedCovariateConceptIds": [],
+    "ConditionGroupEraMediumTerm": false,
+    "DrugExposureMediumTerm": false,
+    "DistinctProcedureCountLongTerm": false,
+    "DrugEraAnyTimePrior": false,
+    "endDays": 0,
+    "ConditionOccurrenceShortTerm": true
+  }],
+  "conceptSets": [],
+  "id": 426,
+  "packageName": "readmission"
+}
